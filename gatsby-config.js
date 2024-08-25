@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Bill Liu | Student`,
     // Description that goes under your name in main bio
-    description: `Donuts`,
+    description: `Rising High School Senior, Aspiring Database Admin (Unemployed with no dedicated career path)`,
     // Optional: Twitter account handle
     author: ``,
     // Optional: Github account URL
@@ -15,62 +15,62 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/bill-liu/`,
     // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
+    about: `Resident of B.C., Canada, Student. Enjoys gardening, video games, and explores many parts of computer science occasionally. Currently applying to univresity for the next step in life. `,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
-        name: 'Devfolio',
+        name: 'AirMesh',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
+          'A mobile weather and air quality station designed for personal use and rural areas, built entirely from C++',
         link: 'https://github.com/RyanFitzgerald/devfolio',
       },
-      {
-        name: 'ChromeExtensionKit',
-        description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
-      },
-      {
-        name: 'Another Cool Project',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
+      // {
+      //   name: 'ChromeExtensionKit',
+      //   description:
+      //     'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
+      //   link: 'https://chromeextensionkit.com/?ref=devfolio',
+      // },
+      // {
+      //   name: 'Another Cool Project',
+      //   description:
+      //     'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
+      //   link: 'https://github.com/RyanFitzgerald/devfolio',
+      // },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
-      {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
-      {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
-      {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
+      // {
+      //   name: 'Acme Corp',
+      //   description: 'Full-Stack Developer, February 2020 - Present',
+      //   link: 'https://github.com/RyanFitzgerald/devfolio',
+      // },
+      // {
+      //   name: 'Globex Corp',
+      //   description: 'Full-Stack Developer, December 2017 - February 2020',
+      //   link: 'https://github.com/RyanFitzgerald/devfolio',
+      // },
+      // {
+      //   name: 'Hooli',
+      //   description: 'Full-Stack Developer, May 2015 - December 2017',
+      //   link: 'https://github.com/RyanFitzgerald/devfolio',
+      // },
     ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
         name: 'Languages & Frameworks',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+          'Python, C++, Node.js, JavaScript, React, HTML/CSS',
       },
-      {
-        name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
-      },
-      {
-        name: 'Other',
-        description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
-      },
+      // {
+      //   name: 'Databases',
+      //   description: 'MongoDB, PostreSQL, MySQL',
+      // },
+      // {
+      //   name: 'Other',
+      //   description:
+      //     'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+      // },
     ],
   },
   plugins: [
