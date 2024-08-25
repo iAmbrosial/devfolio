@@ -22,7 +22,7 @@ module.exports = {
         name: 'AirMesh',
         description:
           'A mobile weather and air quality station designed for personal use and rural areas, built entirely from C++',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        link: 'https://github.com/TomatiKign/airmesh',
       },
       // {
       //   name: 'ChromeExtensionKit',
