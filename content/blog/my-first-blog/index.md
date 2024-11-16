@@ -1,5 +1,5 @@
 ---
-title: My First Blog Post
+title: Investigating Twitter Connections
 date: '2024-11-15T12:00:00.00Z'
 description: 'Social Network Analysis from a Web Crawler'
 ---
