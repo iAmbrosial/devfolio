@@ -57,11 +57,105 @@ driver.get(TARGET_URL)
 driver.implicitly_wait(5)
 ```
 
-- Numquam fugiat quibusdam aut ut
-- Soluta necessitatibus deserunt nobis
-- Illum esse recusandae facere ipsam
+There is other code associated with inputting the correct credentials to login to the bot X account, and involves using mechanisms of waiting so that it is hopefully not detected as an automated machine. However, with more frequent logins happening X may try to protect their website from bots like our web crawler, and direct you to a different page asking for the email to be reentered to prevent this. I circumnavigated this by trying to have the bot run the default code, but if the password field is not found on the page then it will recognize that and use the protocol for logging in on the alternative login page. 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit inventore sunt, consequatur omnis tempore ullam natus.
+After the auto-login process was set up, I then focused on getting the web crawler to actually scrape the user data off of their twitter profiles. To do this the page source must first be retrieved and parsed using BeautifulSoup. After this, we can begin the info extracction. This begins with a center point, which I chose to be Elon Musk's profile on X as he has a wide range of connections to people from all sectors—and is a public profile. The web crawler first collected data such as his username, handle, biography, header, follower count, and following count to save them in a temporary Python dictionary before being transferred to the database. 
+
+This process will output a Python dictionary that looks like this.
+
+```python
+{'Profile Name': 'Scrapingdog', 
+'Profile Handle': '@scrapingdog', 
+'Profile Bio': 'Scrapingdog provides web scraping tools, APIs & extension for fast & seamless data extraction', 
+'Profile Header': 'Science & Technologyscrapingdog.comJoined April 2020', 
+'Profile Follower': '148 Followers', 
+'Profile Following': '48 Following'}
+```
+
+Now that we have gotten the data collection working and tested it on our center node (Elon Musk), we can begin forming his social network through analyzing his connections. This starts with collecting a list of his direct connections, which are first-degree connections in SNA, and scraping their individual data from their profiles. 
+
+The action of jumping to the next page of his followers is done by this following code.
+
+```python
+time.sleep(1)
+######################## Go to Following Page ##########################
+# Find the followers link and click it
+followers_href = f"/{URL_ID}/following"  # Update this with the correct href value
+followers_link = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.XPATH, f"//a[@href='{followers_href}']"))
+)
+followers_link.click()
+```
+
+This sends the web crawler to Elon Musk's followers page, where then it begins the process of retrieving the profile information of all followers which are displayed on his page (usually well-known accounts with a limit on how many are displayed, as he is Elon Musk and has hundreds of millions of followers, which would obviously take too long to collect data on).
+
+The function below reaches out to all of the "leaves," which are the individuals in his followers list, and scrapes their information to store using Pandas. 
+
+```python
+import pandas as pd
+# Extract each follower account element
+account_elements = driver.find_elements(By.CSS_SELECTOR, "#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div:nth-child(2) > div > div")
+
+# Extract information for each account
+followers_info = {'Name':[], 'Handle':[], 'Bios':[]}
+
+def extract_leaf_texts(element):
+    if element.name is None:  # It's a NavigableString (leaf text node)
+        return [element]
+    
+    texts = []
+    for child in element.children:
+        texts.extend(extract_leaf_texts(child))
+    return texts
+
+for account_element in account_elements:
+
+    account_html = account_element.get_attribute('outerHTML')
+    soup_account = BeautifulSoup(account_html, 'html.parser')
+    
+    account_info = {}
+
+    text = extract_leaf_texts(soup_account)
+
+    # print(text)
+    if text:
+        followers_info['Name'].append(text[0])
+        followers_info['Handle'].append(text[1])
+        if len(text)>4:
+            t = ''
+            for i in text[4:]:
+                t+=i
+            followers_info['Bios'].append(t)
+        else:
+            followers_info['Bios'].append(None)
+
+pd.DataFrame(followers_info)
+```
+
+This process is then replicated for his verified followers and following lists as well using similar code. 
+
+Now that we have all of this data, we need to create a database to store it in. This is where Sqlalchemy comes in. We can use it to create a database that we can write and read information from.
+
+```python
+import sqlalchemy
+
+# Connect to the database
+engine = sqlalchemy.create_engine('sqlite:///x.db')
+conn = engine.connect() 
+
+# Write the DataFrame to the database
+df_followers.to_sql(name='follower', con=conn, if_exists='replace', index=False)
+df_following.to_sql(name='following', con=conn, if_exists='replace', index=False)
+df_v_followers.to_sql(name='v_follower', con=conn, if_exists='replace', index=False)
+```
+
+At this point this is what our data for Elon Musk's social network looks like on a condensed scale.
+
+![Diagram depicting a first-degree social network](./SNA_lvl1.png)
+
+After collecting all of this data on Elon Musk's first-degree connections, I then moved on to scraping the data from his second-degree and third-degree connections as well. In other words, I went to the users we collected in his followers, verified followers, and following lists, and went into their profiles to find their followers, verified followers, and followings and toko the data of those individuals as well. Repeating this 2 more times allows us to form a larger web of Elon Musk's social network.
+
+<!-- 
 
 1. Numquam fugiat quibusdam aut ut
 2. Soluta necessitatibus deserunt nobis
@@ -75,4 +169,4 @@ Minus rem dicta eos exercitationem illum consequatur consectetur praesentium vol
 
 
 
-Numquam fugiat quibusdam aut ut, voluptatibus accusamus repellendus quas minus consequuntur possimus!
+Numquam fugiat quibusdam aut ut, voluptatibus accusamus repellendus quas minus consequuntur possimus! -->
