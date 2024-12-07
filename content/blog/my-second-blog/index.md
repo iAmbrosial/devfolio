@@ -1,58 +1,43 @@
 ---
 title: Bubble Cursor?
-date: '2020-10-02T12:00:00.00Z'
+date: '2024-12-06T12:00:00.00Z'
 description: 'Experimenting using different types of cursors in a hope to determine the weaknesses and advantages of each.'
 ---
 
-## Lorem ipsum dolor sit amet consectetur adipisicing elit
+## What is a "Bubble Cursor"?
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit inventore sunt, consequatur omnis tempore ullam natus, porro odit aut, atque asperiores repudiandae corporis quidem esse eos provident velit perferendis magni fugit eum quisquam eligendi. Atque distinctio iure aliquam veniam inventore, soluta est, cum accusantium possimus illum quasi eveniet sed amet ipsa culpa vel in delectus laboriosam repellendus totam. Facere.
+Cursors are commonly recognized today as the moving pointer on a screen that you can use to select areas and click buttons. The way these work is by moving your cursor to be placed on top of the area you wish to interact with, and then clicking to complete the interaction. However, what if we made a cursor that would adapt its activation area by resizing itself? This is what the button cursor is for: a cursor which dynamically resizes its activation area depending on the proximity of its surrounding targets, ensuring that only one target is selectable at any time. This is not a new concept and research was done upon it back in 2005, but I wanted to explore it as a way of improving my undersatnding of a well-designed and scientifically sound experiment. 
 
-![Mountain](./mountain.jpg)
+![Bubble Cursor](./bubblecursor.png)
 
-Aliquam aliquid rem facere dolorum consectetur consequatur distinctio [mollitia id modi repellendus](https://github.com/RyanFitzgerald/devfolio) vero quae dolorem commodi soluta voluptates iusto nobis est dolore provident, porro veritatis placeat nemo impedit! Asperiores culpa delectus hic qui saepe, ipsum quia, exercitationem repellendus magni soluta sit suscipit laborum ducimus.
+A video can be found here with further details on how this technology works and is implemented. [Bubble Cursor](https://www.youtube.com/watch?v=JUBXkD_8ZeQ) 
 
-## Asperiores culpa delectus hic qui saepe
+All credits go to the original creators Tovi Grossman and Ravin Balakrishnan.
 
-### Facere labore velit ad autem
+## Takeaways from this Study
 
-Vitae veritatis quae eius quis vel soluta cumque? Facere labore velit ad autem. Nisi recusandae ducimus molestiae error ipsa quaerat, dignissimos suscipit similique itaque sunt provident quasi minus ut porro. Optio modi harum _dolore necessitatibus exercitationem_ blanditiis magni error ipsum, odit deleniti eligendi facilis, nesciunt delectus sit nostrum porro quam accusamus excepturi labore sequi maiores soluta?
+### Experimental Procedures
 
-### Porro veritatis placeat nemo impedit
+By conducting this study, I was able to gain a better understanding of the practical applications of techniques in experiment design such as control and treatment groups, and how these are implemented to achieve greater accuracy and success. I ran my epxeriment using 3 types of cursors, the point, area, and bubble cursors; 3 different sizes of targets to click; and 3 amounts of targets that would have to be clicked on. I repeated these with a few participants, which were limited as there were no benefits I could provide to them by helping me complete this study. 
 
-Veritatis et praesentium totam neque earum commodi nesciunt dolor quibusdam incidunt non, ex dicta molestias omnis maiores, maxime velit perferendis tenetur aut porro nostrum, suscipit soluta necessitatibus deserunt nobis. Minus rem dicta eos exercitationem illum consequatur consectetur praesentium voluptas. Dolor inventore quasi necessitatibus odio eaque doloribus.
+### Different Analyses
 
-> Repudiandae iusto et iure pariatur aliquid, quisquam, non sed culpa, dignissimos recusandae facilis. Debitis hic, quaerat recusandae ad id, quis nisi perspiciatis quo aliquid natus similique.
+I learned how to analyze areas of data through calculations for precision, accuracy, recall, and others. Additionally, I now better understand how biases play a role in influencing these results, and how we can best minimize the bias involved, one way of which is to have participants fill out a survey detailing the study and their rights and requirements beforehand. 
 
-Illum esse recusandae facere ipsam fugiat est eaque ducimus facilis provident, distinctio cum aut corporis officiis quo fugit, similique temporibus inventore quidem tempora commodi saepe dicta! Numquam fugiat quibusdam aut ut, voluptatibus accusamus **repellendus quas minus consequuntur** possimus! Est eaque nesciunt, reiciendis voluptate placeat aspernatur doloremque unde cum et architecto suscipit quam facere corrupti nihil odit eum minima voluptatem nobis.
+> Example Consent Form
+- Introduction: What the research is about and who is conducting it.
+- Purpose: Why the research is being conducted.
+- Procedures: What participants will be asked to do.
+- Voluntary Participation: The participant’s right to withdraw from the study at any time.
+- Confidentiality: How the participant’s information will be kept private and used only for the research.
+- Contact Information: Who to contact for more information or in case of concerns.
 
-## Voluptatibus accusamus repellendus quas minus
+### Some graphs and analysis
 
-Ipsum quod, ut animi mollitia ipsam repellat, dolore voluptate quibusdam quasi reiciendis necessitatibus odio ea nostrum illo explicabo? Ducimus, in repudiandae. Ratione dolore sequi in animi obcaecati incidunt reprehenderit illo repellat atque aperiam, praesentium eligendi! Sed voluptas voluptatem sunt distinctio pariatur ullam? Laudantium laboriosam.
+By conducting this study, I was able to create some graphs to draw some conclusions from my study. As we can see here, the bubble and area cursors generally performed better in our simple tests compared to the standard point cursor. 
 
-- Numquam fugiat quibusdam aut ut
-- Soluta necessitatibus deserunt nobis
-- Illum esse recusandae facere ipsam
+![Graph on Cursor Mean Speeds by Number of Targets](./bubbleanalyze1.png)
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit inventore sunt, consequatur omnis tempore ullam natus.
+![Graph on Cursor Mean Speeds by Size of Targets](./bubbleanalyze2.png)
 
-1. Numquam fugiat quibusdam aut ut
-2. Soluta necessitatibus deserunt nobis
-3. Illum esse recusandae facere ipsam
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit inventore sunt, consequatur omnis tempore ullam natus, porro odit aut, atque asperiores repudiandae corporis quidem esse eos provident velit perferendis magni fugit eum quisquam eligendi. Atque distinctio iure aliquam veniam inventore, soluta est, cum accusantium possimus illum quasi eveniet sed amet ipsa culpa vel in delectus laboriosam repellendus totam. Facere.
-
-## Suscipit soluta necessitatibus deserunt nobi
-
-Minus rem dicta eos exercitationem illum consequatur consectetur praesentium voluptas. Dolor inventore quasi necessitatibus odio eaque doloribus.
-
-```js
-const helloWorld = (name = 'World') => {
-  return `Hello ${name}!`;
-};
-
-helloWorld();
-helloWorld('John Doe');
-```
-
-Numquam fugiat quibusdam aut ut, voluptatibus accusamus repellendus quas minus consequuntur possimus!
+Overall, while this study was not anywhere near perfect and we cannot draw any concrete conclusions, it was interesting for me to run and see how such a study is done and helped me to learn about these processes.
