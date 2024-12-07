@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/bill-liu/`,
     // Content of the About Me section
-    about: `Resident of B.C., Canada, Student. Enjoys gardening, video games, and explores many parts of computer science occasionally. Currently applying to univresity for the next step in life. `,
+    about: `Resident of B.C., Canada, Student. Enjoys gardening, video games, and explores many parts of computer science occasionally. Currently applying to university for the next step in life. `,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
