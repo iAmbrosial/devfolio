@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Bill Liu | Student`,
     // Description that goes under your name in main bio
-    description: `High School Senior, Aspiring Database Admin (Unemployed with no dedicated career path)`,
+    description: `1st Year Undergraduate, Aspiring ???`,
     // Optional: Twitter account handle
     author: ``,
     // Optional: Github account URL
@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/bill-liu/`,
     // Content of the About Me section
-    about: `Resident of B.C., Canada, Student. Enjoys gardening, video games, and explores many parts of computer science occasionally. Currently applying to university for the next step in life. `,
+    about: `Born in Shanghai, China. Completed K-12 Education in B.C., Canada, and currently a 1st year undergraduate student at UCI. Student. Enjoys gardening, video games, and exploring different aspects of computer science occasionally.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -60,17 +60,19 @@ module.exports = {
       {
         name: 'Languages & Frameworks',
         description:
-          'Python, C++, Node.js, JavaScript, React, HTML/CSS',
+          'Python, Java, HTML/CSS, scikit-learn/Pandas',
       },
       // {
       //   name: 'Databases',
       //   description: 'MongoDB, PostreSQL, MySQL',
       // },
-      // {
-      //   name: 'Other',
-      //   description:
-      //     'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
-      // },
+      {
+        name: 'Other',
+        description:
+              'basic experience with Amazon Web Services (AWS)'
+        // description:
+        //   'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+      },
     ],
   },
   plugins: [
