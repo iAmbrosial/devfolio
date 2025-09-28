@@ -39,11 +39,11 @@ module.exports = {
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
-      // {
-      //   name: 'Acme Corp',
-      //   description: 'Full-Stack Developer, February 2020 - Present',
-      //   link: 'https://github.com/RyanFitzgerald/devfolio',
-      // },
+      {
+        name: 'FastTrack Academy Research Mentorship Program',
+        description: 'Student/Researcher, May 2024 - Aug 2025',
+        link: 'https://github.com/iAmbrosial/AI4SocialGood',
+      },
       // {
       //   name: 'Globex Corp',
       //   description: 'Full-Stack Developer, December 2017 - February 2020',
@@ -69,7 +69,7 @@ module.exports = {
       {
         name: 'Other',
         description:
-              'basic experience with Amazon Web Services (AWS)'
+              'Basic experience with Amazon Web Services (AWS)'
         // description:
         //   'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
       },
