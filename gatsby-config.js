@@ -15,7 +15,8 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/bill-liu/`,
     // Content of the About Me section
-    about: `Born in Shanghai, China. Completed K-12 Education in B.C., Canada, and currently a 1st year undergraduate student at UCI. Student. Enjoys gardening, video games, and exploring different aspects of computer science occasionally.`,
+    about: `Born in Shanghai, China. Completed K-12 Education in B.C., Canada, and currently a 1st year undergraduate student at UCI. Student. Enjoys gardening, video games, and exploring different aspects of computer science occasionally.
+    \nA member of ICSSC Projects a Cyber@UCI Infrastructure Intern.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
